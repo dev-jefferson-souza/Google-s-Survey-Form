@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  /*var-colors*/
+  --black: hsl(0, 0%, 18%);
+  --gray: hsl(213, 5%, 32%);
+
+
+  animation: fade-in 1.75s forwards;
+  animation-iteration-count: 1;
+}
+@keyframes fade-in{
+  0%{
+    opacity: 0;
+  }
+}
+header{
+  display: flex;
+  justify-content: center;
+  padding: 25px 0px 0px 25px;
+  margin-bottom: 35px;
+}
+#logo-google{
+  width: 130px;
+}
+h1{
+  color: var(--black);
+  font-size: 42px;
+  font-weight:600;
+  text-align: left;
+  margin: 0px 0px 4px;
+  padding: 0px 15px 0px 15px;
+
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 0px 20px;
+  max-width: 800px;
+  height: fit-content;
+  margin: 0 auto;
+
+}
+
+#description{
+  color: var(--gray);
+  font-size: 16px;
+  font-weight: 400;
+  padding: 0px 15px 0px 15px;
+}
+#android{
+  margin: 0 auto;
+  position: relative;
+  bottom: 34px;
+  opacity: 0.7;
+  width: 45px;
+  height: auto;
+}
+#survey-form{
+  animation: move-up 1.4s forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.25, 0.30, 1.20);
+  
+  border-radius: 8px;
+  border: solid hsla(218, 5%, 32%, 0.175) 0.25px;
+  box-shadow:  2px 2px 20px #dfdfdf,
+              -5px -5px 15px #ffffff00;
+  display: flex;
+  flex-direction: column;
+              
+  margin: 64px 0px 0px 0px;
+  padding: 0px 24px 12px 24px;
+  height: fit-content;
+
+  position: relative;
+  top: 10px;
+}
+h3{
+  animation: form-fade-in 2s;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+@keyframes move-up {
+  0%{
+    position: relative;
+    top: 1000px;
+  }
+  100%{
+    bottom: 1000px;
+  }
+}
+form{
+  display: flex;
+  flex-direction: column;
+  animation: form-fade-in 3s 0s;
+  animation-timing-function: cubic-bezier(0.75, 0, 0, 1.25);
+  margin: 0px 0px 40px 0px;
+}
+@keyframes form-fade-in {
+  0%{
+    opacity: 0;
+  }
+}
+label{
+  margin: 0 0 8px 0;
+}

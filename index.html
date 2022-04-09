@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Google Survey</title>
+</head>
+
+<!--User Story #1: I can see a title with id="title" in H1 sized text.
+
+User Story #2: I can see a short explanation with id="description" in P sized text. 
+
+User Story #3: I can see a form with id="survey-form".
+
+User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+
+User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+
+User Story #7: Inside the form, I can enter a number in a field with id="number".
+
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+
+User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+
+User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+
+User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+
+User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+
+User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+
+User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+
+User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
+
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.-->
+
+<body>
+  <header><img id="logo-google" src="./assets/logo-google.png" alt="Google's logo"></header>
+  <section id="container">
+    <h1 id="title">We help you daily, can you help us this time?</h1>
+    <p id="description">Our team wants your opinion about our products. By completing this survey, you will be helping us to improve your experience with them.</p>
+    <main id="form-container">
+      <section id="survey-form">
+        <img id="android" src="./assets/logo-android.png" alt="">
+
+        <form action="/most_used_services">
+          <h3>In your opinion, what are the most usefull Google Services?</h3>
+          <label for="google-docs"><input id="google-docs" type="checkbox" name="most_used_services"> Google Docs</label>
+          <label for="drive"><input id="drive" type="checkbox" name="most_used_services"> Drive</label>
+          <label for="google-maps"><input id="google-maps" type="checkbox" name="most_used_services"> Google Maps</label>
+          <label for="gmail"><input id="gmail" type="checkbox" name="most_used_services"> Gmail</label>
+          <label for="google-meat"><input id="google-meet" type="checkbox" name="most_used_services"> Google Meet</label>
+          <label for="google-search"><input id="google-search" type="checkbox" name="most_used_services"> Google Search</label>
+          <label for="youtube"><input id="youtube" type="checkbox" name="most_used_services"> Youtube</label>
+          
+          <h3>For which of these purposes do you most use our services?</h3>
+          <label for="work"><input id="work" type="radio" name="purpose">Work</label>
+          <label for="study"><input id="study" type="radio" name="purpose">Study</label>
+          <label for="entertainment"> <input id="entertainment" type="radio" name="purpose">Entertainment</label>
+        </form>
+      </section>
+    </main>
+  </section>
+</body>
+</html>
