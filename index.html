@@ -47,28 +47,79 @@ User Story #16: Inside the form element, I am presented with a button with id="s
   <header><img id="logo-google" src="./assets/logo-google.png" alt="Google's logo"></header>
   <section id="container">
     <h1 id="title">We help you daily, can you help us this time?</h1>
-    <p id="description">Our team wants your opinion about our products. By completing this survey, you will be helping us to improve your experience with them.</p>
+    <p id="description">Our team wants your opinion about our products and services. By completing this survey, you will be helping us to improve your experience with them.</p>
     <main id="form-container">
-      <section id="survey-form">
-        <img id="android" src="./assets/logo-android.png" alt="">
-
-        <form action="/most_used_services">
-          <h3>In your opinion, what are the most usefull Google Services?</h3>
-          <label for="google-docs"><input id="google-docs" type="checkbox" name="most_used_services"> Google Docs</label>
-          <label for="drive"><input id="drive" type="checkbox" name="most_used_services"> Drive</label>
-          <label for="google-maps"><input id="google-maps" type="checkbox" name="most_used_services"> Google Maps</label>
-          <label for="gmail"><input id="gmail" type="checkbox" name="most_used_services"> Gmail</label>
-          <label for="google-meat"><input id="google-meet" type="checkbox" name="most_used_services"> Google Meet</label>
-          <label for="google-search"><input id="google-search" type="checkbox" name="most_used_services"> Google Search</label>
-          <label for="youtube"><input id="youtube" type="checkbox" name="most_used_services"> Youtube</label>
-          
-          <h3>For which of these purposes do you most use our services?</h3>
-          <label for="work"><input id="work" type="radio" name="purpose">Work</label>
-          <label for="study"><input id="study" type="radio" name="purpose">Study</label>
-          <label for="entertainment"> <input id="entertainment" type="radio" name="purpose">Entertainment</label>
+      <section id="survey-form-container">
+        <img id="logo-android" src="./assets/logo-android.png" alt="">
+        <form id="survey-form" action="#">
+          <div class="question">
+            <h4>In your opinion, what are the most usefull Google Services?</h4>
+            <label for="google-docs"><input id="google-docs" type="checkbox" name="most_used_services"> Google Docs</label>
+            <label for="drive"><input id="drive" type="checkbox" name="most_used_services"> Drive</label>
+            <label for="google-maps"><input id="google-maps" type="checkbox" name="most_used_services"> Google Maps</label>
+            <label for="gmail"><input id="gmail" type="checkbox" name="most_used_services"> Gmail</label>
+            <label for="google-meat"><input id="google-meet" type="checkbox" name="most_used_services"> Google Meet</label>
+            <label for="google-search"><input id="google-search" type="checkbox" name="most_used_services"> Google Search</label>
+            <label for="youtube"><input id="youtube" type="checkbox" name="most_used_services"> Youtube</label>
+          </div>
+          <div class="question">
+            <h4>For which of these purposes do you most use our services?</h4>
+            <label for="entertainment"><input type="radio" class="radio-checkmark" id="entertainment" name="purpose" required checked>Entertainment</label>
+            <label for="study"><input type="radio" class="radio-checkmark" id="study" name="purpose">Study</label>
+            <label for="work"><input type="radio" class="radio-checkmark" id="work" name="purpose">Work</label>
+          </div>  
+          <div class="question">
+            <h4>On which of these platforms do you use our services the most?</h4>
+            <label for="android"><input type="radio" class="radio-checkmark" id="android" name="plataform" required checked>Android</label>
+            <label for="ios"><input type="radio" class="radio-checkmark" id="ios" name="plataform">IOS</label>
+            <label for="chorme-os"><input type="radio" class="radio-checkmark" id="chorme-os" name="plataform">Chorme OS</label>
+            <label for="mac-os"><input type="radio" class="radio-checkmark" id="mac-os" name="plataform">Mac OS</label>
+            <label for="windows"><input type="radio" class="radio-checkmark" id="windows" name="plataform">Windows</label>
+          </div>
+          <div class="question">
+           <h4>How often do you notice a bug in our services?</h4>
+           <div class="custom-select">
+              <select name="how-often" id="dropdown">
+                <option value="never" checked>Never</option>
+                <option value="rarely">Rarely</option>
+                <option value="ocassionally">Occasionally</option>
+                <option value="frequently">Frequently</option>
+                <option value="all-the-time">All the time</option>
+              </select>
+           </div>
+          </div>
+          <hr id="divider">
+          <div class="personal-information">
+            <h3>Now we need some personal information</h3>
+            <p>This information will be used to ensure that only one form is completed per person.</p>
+            <h4>What is your name?</h4>
+            <label for="name"><input type="text" name="name" class="text-box" id="name-label" required placeholder="Name"></label>
+          </div>
+          <div class="personal-information">
+            <h4>And... What is your e-mail?</h4>
+            <label for="email"><input type="email" class="text-box" name="email" id="email-label" required placeholder="E-mail"></label>
+          </div>
+          <div class="personal-information">
+            <h4>And finally, what's your phone number?</h4>
+            <label for="number"><input type="number" class="text-box" name="number" id="number-label" placeholder="Phone" required></label>
+          </div>
+          <div class="personal-inform">
+            <h4>Do you have any suggestion? Tell us</h4>
+            <textarea class="text-box" name="comments" id="comments" cols="30" rows="10" placeholder="Leave some additional comments here (optional)."></textarea>
+          </div>
+          <input type="submit" value="Submit" id="submit">
         </form>
       </section>
     </main>
   </section>
+  <footer>
+    <h5>Page made by Jefferson Souza</h5>
+    <h6>Check my social network</h6>
+    <section id="social-network">
+      <a href=""><img class="logo-social" src="./assets/logos/logo-github.png" alt="Github logo"></a>
+      <a href="https://www.instagram.com/bad7k_/"><img class="logo-social" src="./assets/logos/logo-instagram.png" alt="Instagram Logo"></a>
+    </section>
+    <h6 style="margin: 0px 0px px 0px;"> Project made for <a id="free-code-camp" href="https://www.freecodecamp.org/">FreeCodeCamp<a></h6>
+  </footer>
 </body>
 </html>
